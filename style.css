@@ -121,6 +121,7 @@ button{
 .dashboard{
     display: flex;
     align-items: center;
+    align-self: start;
 }
 .dashboard>h1{
     font-size: min(3.5vh,5vw);
@@ -134,7 +135,7 @@ button{
     padding: min(2vh,2vw);
     display: flex;
     flex-direction: column;
-    gap: min(1vh,1vw);
+    gap: min(2vh,2vw);
 }
 .menu-icon{
     width: min(4vh,4vw);
@@ -272,7 +273,7 @@ main{
     flex:1;
 }
 
-@media (max-width:500px) {
+@media (max-width:940px) {
 body{
     display: grid;
     grid-template-columns:2fr 2fr 4fr;
@@ -281,7 +282,7 @@ body{
 }
 .sidebar{
     grid-area: 1/1/2/-1 ;
-    grid-template-rows: 1fr 2fr 1fr
+    grid-template-rows: 1fr 2fr 1fr;
 }
 header{
     grid-area: 2/1/3/-1;
