@@ -8,7 +8,7 @@ body{
     display: grid;
     grid-template-columns: 1fr 4fr;
     grid-template-rows: 1fr 5fr;
-    height: 100dvh;
+    height: 100vh;
     margin: 0;
 }
 header,
@@ -28,25 +28,48 @@ header>*{
     background-color: white;
 }
 .head-up{
-
+ display: flex;
+ gap:2vh;
 }
 .searchbar-container{
+    flex: 1;
     display: flex;
     padding: 2vh;
     gap:1vh;
+    align-items: center;
 }
-.searchbar-icon{
+.head-icon{
     width: min(4vh,4vw);
 }
 .searchbar{
     height: 4vh;
-    width: 50vh;
+    flex: 1;
+    max-width: 50vh;
     border-radius: 25vh;
-}
-.searchbar::placeholder{
-    padding: 20px;
+    min-width: 1vh;
+    font-size: 1vh;
+    padding-left: 2vh;
+    border: none;
+    background-color: rgb(228, 228, 228);
+    box-shadow: 0.3vh 0.3vh 0 rgba(0, 0, 0, 0.15);
 }
 
+.profile-icons{
+    padding: 2vh;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 2vh;
+    flex:1;
+}
+.profile-icon-mini{
+    width: min(6vh,6vw);
+    border-radius: 3vh;
+}
+.profile-name-mini{
+    font-size: min(2.3vh,3vw);
+    font-weight: bold;
+}
 .head-down{
 
 }
