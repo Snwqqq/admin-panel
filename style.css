@@ -241,6 +241,7 @@ main{
 }
 .trending-container{
     display: flex;
+    gap:min(2vh,20px);
     justify-content: space-around;
     flex-direction: column;
     background-color: white;
