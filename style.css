@@ -189,8 +189,11 @@ main{
 .project-text{
   font-size: 1.7vh;
   color: rgb(94, 94, 94);
-  overflow: hidden; 
-  text-overflow: ellipsis; 
+  display: -webkit-box;            /* Use a flexible box layout model */
+  -webkit-box-orient: vertical;    /* Orient the box vertically */
+  overflow: hidden;                /* Hide overflowing content */
+  text-overflow: ellipsis;         /* Show ellipsis (...) for overflowing text */
+  -webkit-line-clamp: 5;    
 }
 .projec-icons{
     margin-top: auto;
