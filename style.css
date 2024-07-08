@@ -2,6 +2,7 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    font-family: 'Roboto',Arial, Helvetica, sans-serif;
 }
 
 body{
@@ -10,11 +11,6 @@ body{
     grid-template-rows: 1fr 5fr;
     height: 100vh;
     margin: 0;
-}
-header,
-main,
-.sidebar{
-border: 1px solid red;
 }
 
 header{
@@ -114,9 +110,6 @@ button{
     color: black;
 }
 
-
-
-
 .sidebar{
     grid-area: 1/1/-1/2;
     padding: min(2vh,2vw);
@@ -155,9 +148,6 @@ button{
     font-size: min(2.2vh,4vw);
 }
 
-.border{
-    border: 1px solid red;   
-}
 main{
     display: grid;
     grid-template-columns: 2.5fr 1fr;
@@ -175,13 +165,13 @@ main{
 }
 .projects-container{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(400px,1fr));
     column-gap: 2vh;
     row-gap: 2vh;
     padding: 2vh;
 }
 .project{
-    height: 200px;
+    height: 239px;
     border-left: 1.5vh solid #fde047;
     background-color: white;
     border-radius: 10px;
@@ -189,7 +179,7 @@ main{
     padding: 2vh;
     display: flex;
     flex-direction: column;
-    gap: 2vh;
+    gap: min(1vh,1vw);
 }
 .project-head{
     font-size: 2.2vh;
@@ -198,6 +188,8 @@ main{
 .project-text{
   font-size: 1.7vh;
   color: rgb(94, 94, 94);
+  overflow: hidden; 
+  text-overflow: ellipsis; 
 }
 .projec-icons{
     margin-top: auto;
@@ -214,6 +206,66 @@ main{
     flex-direction: column;
     padding: 2vh;
     row-gap: 1vh;
+}
+.anouncments-container{
+    padding: 2vh;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.15);
+    display: grid;
+    justify-content: center;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+.anouncments-container .anouncment:first-child {
+    border: none;
+}
+
+.anouncment{
+    overflow: hidden;           /* Hides any overflowing text */
+    text-overflow: ellipsis; 
+    padding: 1vh;  
+    border-top: 2px solid gray;
+    display: flex;
+    flex-direction: column;
+}
+.anouncment-head{
+    font-size: 1.8vh;
+    font-weight: bold;
+    flex: 1;
+}
+.anouncment-text{
+    font-size: 1.3vh;
+    color: rgb(94, 94, 94);
+    flex: 1;
+}
+.trending-container{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 10px;
+    padding: 2vh;
+    box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.15);
+}
+.trending{
+    display: flex;
+    gap: 2vh;
+}
+.trending-img{
+    width: min(6vh,10vw);
+    border-radius: 100%;
+}
+.trending-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.trending-hashtag{
+    font-size: 1.8vh;
+}
+.tranding-name{
+    color: rgb(137, 137, 137);
+    font-size: 1.8vh;
 }
 
 .else>div{
@@ -237,5 +289,9 @@ header{
 main{
   grid-area: 3/1/4/-1;
   grid-template-columns: 1fr;
+}
+
+.projects-container{
+    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
 }
 }
